@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+body {
+  color: #060606;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+a{
+  text-decoration: none;
+  color: #060606;
+}
+h2{
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.5em;
+}
+img {
+  width: 100%;
+}
+/*枠線の確認用に一時的に適応 後で削除*/
+body, header, footer, main, section, div, p, li, dt, dd, a{
+  margin:10px;
+  padding:10px;
+}
+/* header, footer, main, section{
+  border: 2px solid #f00;
+}
+div, p{
+  border: 1px solid #00f;
+}
+li, dt, dd, a{
+  border: 1px dotted #0f0;
+} */
+
+
+.wrapper {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+}
+#section {
+  padding-bottom: 100px;
+}
+
+.header_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header .logo {
+  width: 54px;
+  height: 76px;
+}
+#header .header_nav ul {
+  display: flex;
+}
+
+#main section {
+  width: 85%;
+  margin: 0 auto 60px;
+}
+
+#kyevisual {
+  background-image: url(../images/top_kv.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+
+#about img {
+  width: 40%;
+}
+#service {
+  background-color: antiquewhite;
+}
+#service .comment_area {
+  display: flex;
+}
+#service .comment_area h2 {
+  flex: 1;
+}
+#service .comment_area p {
+  flex: 2;
+}
+#service .list_area {
+  display: flex;
+}
+#service .list_area .comment {
+  text-align: left;
+}
+#service .list_area p {
+  margin: 0;
+  padding: 0;
+}
+#service .list_title {
+  padding-bottom: 15px;
+}
+#news .sec_title {
+  margin-bottom: 16px;
+  border-bottom: 1px solid #000;
+  text-align: left;
+}
+#news .list {
+  display: flex;
+}
+#news .list .data {
+  align-items: center;
+  margin-right: 32px;
+}
+
+#footer {
+  padding: 90px 0 70px;
+}
+#footer .footer_logo {
+  width: 100px;
+  margin: 0 auto;
+}
+#footer .copy {
+  margin: 30px auto 0;
+  padding: 0;
+}
+#footer .copyright {
+  margin: 0;
+  padding: 0;
+}
