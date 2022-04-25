@@ -4,10 +4,13 @@ body {
   color: #060606;
   font-size: 16px;
   font-family: sans-serif;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
 }
 a{
   text-decoration: none;
   color: #060606;
+  display: block;
 }
 h2{
   font-size: 2em;
@@ -19,10 +22,10 @@ img {
   width: 100%;
 }
 /*枠線の確認用に一時的に適応 後で削除*/
-body, header, footer, main, section, div, p, li, dt, dd, a{
+/* body, header, footer, main, section, div, p, li, dt, dd, a{
   margin:10px;
   padding:10px;
-}
+} */
 /* header, footer, main, section{
   border: 2px solid #f00;
 }
@@ -33,14 +36,15 @@ li, dt, dd, a{
   border: 1px dotted #0f0;
 } */
 
-
-.wrapper {
+.wrap {
   width: 85%;
   margin: 0 auto;
   text-align: center;
 }
-#section {
+main section {
   padding-bottom: 100px;
+  width: 85%;
+  margin: 0 auto 60px;
 }
 
 .header_nav {
@@ -55,22 +59,20 @@ li, dt, dd, a{
 #header .header_nav ul {
   display: flex;
 }
-
-#main section {
-  width: 85%;
-  margin: 0 auto 60px;
+#header .header_nav li {
+  width: 80px;
 }
 
 #kyevisual {
   background-image: url(../images/top_kv.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  width: auto;
   height: 70vh;
   display: flex;
   align-items: center;
   padding-left: 10%;
   font-size: 1.5em;
-  line-height: 1.2;
 }
 
 
@@ -104,11 +106,12 @@ li, dt, dd, a{
 }
 #news .sec_title {
   margin-bottom: 16px;
-  border-bottom: 1px solid #000;
+  border-bottom: 0.8px solid lightgray;
   text-align: left;
 }
 #news .list {
   display: flex;
+  border-bottom: 0.8px solid lightgray;
 }
 #news .list .data {
   align-items: center;
@@ -127,6 +130,101 @@ li, dt, dd, a{
   padding: 0;
 }
 #footer .copyright {
+  color: #b5b5b5;
+  font-size: 11px;
   margin: 0;
   padding: 0;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 13px;
+  }
+  #header {
+    padding: 10px 0;
+  }
+  .header_nav {
+    width: 100%;
+    flex-direction: column;
+  }
+  #header .logo {
+    width: 40px;
+    margin-bottom: 20px; 
+  }
+  #header .logo img {
+    width: 100%;
+  }
+  #header .nav_bar ul {
+    width: 100%;
+  }
+  #header .nav_bar ul li {
+    width: calc(100% / 4);
+    font-size: 13px;
+  }
+  main {
+    padding-top: 110px;
+  }
+  #kyevisual {
+    height: 50vh;
+    font-size: 18px;
+  }
+  #about .sec_title {
+    margin-bottom: 30px;
+  }
+  #about .sec_image {
+    width: 30%;
+    margin: 0 auto;
+  }
+  #about .sec_text {
+    width: 80%;
+    margin: 30px auto 40px;
+    font-size: 13px;
+  }
+  #service {
+    background-color: #fff;
+  }
+  #service .comment_area {
+    flex-direction: column;
+    text-align: center;
+  }
+  #service .comment_area p {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+  #service .list_area {
+    flex-direction: column;
+  }
+  #service .list_area li {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #service .comment h3 {
+    margin: 10px 0;
+  }
+  #news .sec_title {
+    text-align: center;
+  }
+  #news .list_area .list {
+    flex-direction: column;
+    text-align: left;
+  }
+  #news .list_area .list {
+    padding: 24px 12px;
+  }
+  #news .list_area .list .data {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  #footer {
+    padding-top: 50px;
+  }
 }
